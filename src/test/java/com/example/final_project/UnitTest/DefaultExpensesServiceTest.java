@@ -94,7 +94,7 @@ class DefaultExpensesServiceTest {
     @Test
     void registerNewExpense() {
 
-        CreateExpenseCommand commandHappyPath = new CreateExpenseCommand(
+        final CreateExpenseCommand commandHappyPath = new CreateExpenseCommand(
                 TestDataProvider.TITLE_BUDGET_OR_EXPENSE,
                 BigDecimal.valueOf(15));
 
@@ -107,11 +107,11 @@ class DefaultExpensesServiceTest {
         Mockito.when(expenseRepository.save(any(Expense.class))).thenReturn(TestDataProvider.expense);
 
 
-        Either<ApplicationProcessError, Expense> resultHappyPath = expensesService.registerNewExpense(
+        final Either<ApplicationProcessError, Expense> resultHappyPath = expensesService.registerNewExpense(
                 commandHappyPath,
                 String.valueOf(TestDataProvider.budgetId),
                 TestDataProvider.userId);
-        Expense savedExpense = resultHappyPath.get();
+        final Expense savedExpense = resultHappyPath.get();
 
         Assertions.assertTrue(resultHappyPath.isRight());
         Assertions.assertEquals(TestDataProvider.expenseId, savedExpense.expenseId());
@@ -127,13 +127,13 @@ class DefaultExpensesServiceTest {
 
     @Test
     void updateExpenseById() {
-        Expense expenseToUpdate = new Expense(expenseId,
+        final Expense expenseToUpdate = new Expense(expenseId,
                 TestDataProvider.UPDATE_TITLE_FOR_BUDGET_OR_EXPENSE,
                 TestDataProvider.UPDATE_EXPANSE_AMOUNT,
                 TestDataProvider.budgetId,
                 TestDataProvider.userId);
 
-        UpdateExpanseCommand updateCommand = new UpdateExpanseCommand(expenseId,
+        final UpdateExpanseCommand updateCommand = new UpdateExpanseCommand(expenseId,
                 TestDataProvider.UPDATE_TITLE_FOR_BUDGET_OR_EXPENSE,
                 TestDataProvider.UPDATE_EXPANSE_AMOUNT);
 
@@ -157,7 +157,7 @@ class DefaultExpensesServiceTest {
                 any(Expense.class)))
                 .thenReturn(expenseToUpdate);
 
-        Either<ApplicationProcessError, Expense> result = expensesService.updateExpenseById(
+        final Either<ApplicationProcessError, Expense> result = expensesService.updateExpenseById(
                 updateCommand,
                 TestDataProvider.userId,
                 TestDataProvider.budgetId);
