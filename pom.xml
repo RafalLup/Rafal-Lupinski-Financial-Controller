@@ -24,15 +24,15 @@
     </properties>
 
     <dependencies>
-        <!--SERVER-->
+        <!-- SERVER -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!--End SERVER DEPENDENCIES-->
+        <!-- End SERVER DEPENDENCIES -->
 
-        <!--TEST-->
+        <!-- TEST -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -47,7 +47,7 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
+            <version>24.0.1</version>
             <scope>compile</scope>
         </dependency>
 
@@ -60,7 +60,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>RELEASE</version>
+            <version>7.7.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -77,9 +77,9 @@
             <version>${testcontainers.version}</version>
             <scope>test</scope>
         </dependency>
-        <!--END TESTS DEPENDENCIES-->
+        <!-- End TESTS DEPENDENCIES -->
 
-        <!--GENERAL TOOLS-->
+        <!-- GENERAL TOOLS -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
@@ -106,9 +106,9 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--END GENERAL TOOL DEPENDENCIES-->
+        <!-- End GENERAL TOOL DEPENDENCIES -->
 
-        <!--AUXILIARY TOOLS-->
+        <!-- AUXILIARY TOOLS -->
         <dependency>
             <groupId>com.diffplug.spotless</groupId>
             <artifactId>spotless-maven-plugin</artifactId>
@@ -126,14 +126,14 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-        <!--END AUXILIARY TOOLS-->
+        <!-- End AUXILIARY TOOLS -->
 
-        <!--SECURITY DEPENDENCIES-->
+        <!-- SECURITY DEPENDENCIES -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
-        <!--END SECURITY DEPENDENCIES-->
+        <!-- End SECURITY DEPENDENCIES -->
     </dependencies>
     <build>
         <plugins>
