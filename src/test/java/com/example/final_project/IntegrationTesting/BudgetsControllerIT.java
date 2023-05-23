@@ -1,4 +1,4 @@
-package com.example.final_project;
+package com.example.final_project.IntegrationTesting;
 
 import com.example.final_project.api.BudgetApi;
 import com.example.final_project.api.requests.RegisterBudgetRequest;
